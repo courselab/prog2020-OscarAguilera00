@@ -1,6 +1,6 @@
 /* m002.c - Sort three variables.
 
-   This program takes three integers read as command 
+   This program takes three integers read as command
    line arguments and outputs them in ascending order.
 
    E.g.
@@ -27,6 +27,47 @@
 
 void sort (int *a, int *b, int *c)
 {
+ int x;
+ int y;
+ if ((*a < *b) && (*a < *b) && (*b > *c))
+    0;
+    else
+    if ((*a < *b) && (*a < *c) && (*b > *c))
+    {
+        x = *b;
+        y = *c;
+        *b = y;
+        *c = x;
+    }
+    else
+        if((*b < *a) && (*c < *a) && (*b < *c))
+    {
+        x = *a;
+        y = *b;
+        *b = *c;
+        *c = x;
+        *a = y;
+
+    }
+    else
+        if (*a < *b)
+    {
+        x = *b;
+        y = *c;
+        *b = *a;
+        *c = x;
+        *a = y;
+
+    }
+    else
+    if ( *a > *b)
+    {
+        y = *c;
+        *c = *a;
+        *a = y;
+    }
+
+
 }
 
 /* Do not edit this function. */
@@ -44,10 +85,10 @@ int main (int argc, char **argv)
   a = atoi(argv[1]);
   b = atoi(argv[2]);
   c = atoi(argv[3]);
-  
+
   sort (&a, &b, &c);
 
   printf ("%d %d %d\n", a, b, c);
-  
+
   return 0;
 }

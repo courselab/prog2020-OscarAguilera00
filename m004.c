@@ -7,7 +7,7 @@
 
    E.g.
 
-      command line    : m004 0011 
+      command line    : m004 0011
       expected output : 3
 
    Directions:
@@ -29,8 +29,15 @@
 
 int decimal (char *b)
 {
-  
-  return 0;
+    int n, r = 0, i, p = 1;
+    n = strlen(b);
+    for (i = n - 1; i>= 0; i--)
+    {
+        r = r + p * (b[i] - 48);
+        p = p * 2;
+    }
+
+  return r;
 }
 
 #define USAGE "m004 <string>\n"
@@ -50,6 +57,6 @@ int main (int argc, char **argv)
   n = decimal (argv[1]);
 
   printf ("%d\n", n);
-  
+
   return 0;
 }
