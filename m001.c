@@ -22,21 +22,21 @@
 
 /* Return the greatest among a, b and c. */
 
-int greatest (int a, int b, int c)
+int greatest (int a, int b, int d)
 {
-if (a>b && a>c)
+if (a>b && a>d)
 {
 return a;
 }
 else
 {
-if (b>a && b>c)
+if (b>a && b>d)
 {
 return b;
 }
 else
 {
-return c;
+return d;
 }
 }
 }
