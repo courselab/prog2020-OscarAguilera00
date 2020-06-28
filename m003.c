@@ -21,28 +21,28 @@
 
 /* Verify if the positive integer 'a' is prime. */
 
-int is_prime (int x)
+int is_prime (int a)
 {
      int p;
 
   int count = 0;
 
-  for(p =1; p < x; p++)
+  for(p =1; p < a; p++)
   {
-    if(( x %p) ==0)
+    if(( a %p) ==0)
     {
       count ++;
     }
   }
   if(count == 1)
   {
-    x = 1;
+    a = 1;
   }
   else
   {
-    x = 0;
+    a = 0;
   }
-  return x;
+  return a;
   return 0;
 }
 
