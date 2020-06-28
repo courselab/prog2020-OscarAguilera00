@@ -30,7 +30,60 @@ enum {sun, mon, tue, wed, thu, fri, sat};
 
 int day_of_week (int day, int month)
 {
+    int weekday;
+  printf(" Please Enter the Day Number 1 to 7 (Consider 1= Monday, and 7 = Sunday) :  ");
+  scanf("%d", &weekday);
+
+  if (weekday == 1)
+  {
+  	printf("\n Today is Monday");
+  }
+  else if ( weekday == 2 )
+  {
+  	printf("\n Today is Tuesday");
+  }
+  else if ( weekday == 3 )
+  {
+  	printf("\n Today is Wednesday");
+  }
+  else if ( weekday == 4 )
+  {
+  	printf("\n Today is Thursday");
+  }
+  else if ( weekday == 5 )
+  {
+  	printf("\n Today is Friday");
+  }
+  else if ( weekday == 6 )
+  {
+  	printf("\n Today is Saturday");
+  }
+  else if ( weekday == 7 )
+  {
+  	printf("\n Today is Sunday");
+  }
+  else
+    printf("\n Please enter Valid Number between 1 to 7");
+
+ int i = 0;
+  int sum = 0;
+  int Month[12]; //Months from Jan through Dec// //Quantity of Days in each month//
+
+
+  Month [0]=31;
+  Month [1]=29;
+  Month [2]=31;
+  Month [3]=30;
+  Month [4]=31;
+  Month [5]=30;
+  Month [6]=31;
+  Month [7]=31;
+  Month [8]=30;
+  Month [9]=31;
+  Month [10]=30;
+  Month [11]=31;
   return sun;
+
 }
 
 /* Do not edit function main. */
@@ -45,12 +98,12 @@ int main (int argc, char **argv)
       printf (USAGE);
       exit(1);
     }
-  
+
   day = atoi(argv[1]);
   month = atoi(argv[2]);
 
   dweek = day_of_week (day, month);
-  
+
   switch (dweek)
     {
     case sun:
@@ -78,6 +131,6 @@ int main (int argc, char **argv)
       printf ("Something wrong\n");
       break;
     }
-  
+
   return 0;
 }
