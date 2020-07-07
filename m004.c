@@ -1,7 +1,7 @@
 /* m004.c - Binary to decimal.
 
    This program takes a string read as a command line argument and,
-   interpreting it as a positive binary integer, outputs its 
+   interpreting it as a positive binary integer, outputs its
    corresponding value in decimal base.
 
 
@@ -27,17 +27,27 @@
    right before the spurious character (eg. truncate 110x001
    into 110); an empty string means zero. */
 
-int decimal (char *b)
+int decimal (char *c)
 {
-    int n, r = 0, i, p = 1;
-    n = strlen(b);
-    for (i = n - 1; i>= 0; i--)
-    {
-        r = r + p * (b[i] - 48);
-        p = p * 2;
-    }
+  int a;
+  int b;
+  int count = 0;
+  int base = 1;
+  b = strlen (c);
 
-  return r;
+  for (a = c-1; a >= 0 ; a--)
+  {
+     if (c[a]=='1')
+     {
+        count = count + base;
+     }
+
+     base = base * 2;
+  }
+  return count;
+
+
+
 }
 
 #define USAGE "m004 <string>\n"
