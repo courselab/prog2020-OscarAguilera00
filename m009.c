@@ -25,20 +25,21 @@
 
 void sort (int* vector, int n);
 
+{int i,x,z;
+i=1;
+while (i<n)
 {
-int i, v, aux;
-for (i = 0; i < n; i++)
-  {
-    for (v = 0; v < n - i - 1; v++)
+    z = vector[i];
+    x = i-1;
+    while ((x>=0)&&(vector[x] >z))
     {
-      if (vector[v] > vector[v+1])
-      {
-        aux = vector[v];
-        vector [v] = vector [v+1];
-        vector [v+1] = aux;
-      }
+        vector[x+1]=vector[x];
+        x=x-1;
     }
-  }
+    vector[x+1]=z;
+    i=i+1;
+}
+
 }
 
 
