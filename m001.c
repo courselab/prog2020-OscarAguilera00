@@ -23,22 +23,38 @@
 /* Return the greatest among a, b and c. */
 
 int greatest (int a, int b, int d)
-{
-if (a>b && a>d)
-{
-return a;
-}
-else
-{
-if (b>a && b>d)
-{
-return b;
-}
-else
-{
-return d;
-}
-}
+{  int count;
+  count = 0;
+int c;
+   if (a > b && a > c)
+  {
+    count = count + a;
+  }
+   if (b > c && b > a)
+  {
+    count = count + b;
+  }
+  if(c > b && c > a)
+  {
+    count = count + c;
+  }
+  if (( c = b ) && ( c = a ) )
+  {
+    count = count + c;
+  }
+  if (( c = b ) && ( b > a ) )
+  {
+    count = count + c;
+  }
+  if ( ( c = a ) && c > b)
+  {
+    count = count + c;
+  }
+  if ( ( b = a ) && a > c)
+  {
+    count = count + a;
+  }
+  return count ;
 }
 
 
