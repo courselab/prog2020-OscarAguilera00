@@ -26,38 +26,25 @@
 /* Return the determinant of a 3x3 integer matrix.*/
 
 int determinant (int m[3][3])
-{
-    int size;
-    int A[size][size];
-    int row, col;
-    int a, b, c, d, e, f, g, h, i;
-    long det;
+{int a;
+int b;
+int c;
+int d;
+int e;
+int f;
+int g;
+int h;
+ a = m[0][0] * m[1][1] * m[2][2];
+  b = m[0][1] * m[1][2] * m[2][0];
+  c = m[1][0] * m[2][1] * m[0][2];
+  g = a + b + c;
+  d = m[0][2] * m[1][1] * m[2][0];
+  e = m[0][1] * m[1][0] * m[2][2];
+  f = m[0][0] * m[1][2] * m[2][1];
+  h= d + e + f;
+    return g-h;
 
-    printf("Enter elements in matrix of size 3x3: \n");
-    for(row = 0; row < size; row++)
-    {
-    for (col = 0; col<size; col++)
-    {
-    scanf("%d", &A [row][col]);
-    }
-}
-    a = A[0][0];
-    b = A[0][1];
-    c = A[0][2];
-    d = A[1][0];
-    e = A[1][1];
-    f = A[1][2];
-    g = A[2][0];
-    h = A[2][1];
-    i = A[2][2];
 
-    det = (a*(e*i - f*h)) - (b*(d*i - f*g)) + (c*(d*h - e*g));
-
-    printf("Determinant of matrix A = %ld", det);
-
-    return 0;
-
-  return 0;
 }
 
 
