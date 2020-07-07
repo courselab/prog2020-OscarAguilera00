@@ -22,43 +22,22 @@
 
 /* Return the greatest among a, b and c. */
 
-int greatest (int a, int b, int d)
-{  int count;
-  count = 0;
-int c;
-   if (a > b && a > c)
+int greatest (int a, int b, int c)
+{   if (a>= b)
   {
-    count = count + a;
+    if (a>= c)
+    return a;
+    else
+    return c;
   }
-   if (b > c && b > a)
+  else
   {
-    count = count + b;
-  }
-  if(c > b && c > a)
-  {
-    count = count + c;
-  }
-  if (( c = b ) && ( c = a ) )
-  {
-    count = count + c;
-  }
-  if (( c = b ) && ( b > a ) )
-  {
-    count = count + c;
-  }
-  if ( ( c = a ) && c > b)
-  {
-    count = count + c;
-  }
-  if ( ( b = a ) && a > c)
-  {
-    count = count + a;
-  }
-  return count ;
+    if (b>= c)
+    return b;
+    else
+    return c;
 }
-
-
-
+}
 /* Do not edit this function. */
 
 int main (int argc, char **argv)
