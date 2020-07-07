@@ -31,7 +31,10 @@ void crossprod (int a[3], int b[3], int c[3])
     c[1]=a[2]*b[3]-a[3]*b[2];
     c[2]=a[3]*b[1]-a[1]*b[3];
     c[3]=a[1]*b[2]-a[2]*b[1];
+    printf ("%d %d %d\n", c[0], c[1], c[2]);
+  exit (0);
 }
+
 
 
 
