@@ -29,20 +29,15 @@
 
 int decimal (char *c)
 {
-  int a;
-  int b;
-  int count = 0;
-  int base = 1;
-  b = strlen (c);
-
-  for (a = c-1; a >= 0 ; a--)
+ int i, n,  count = 0, base = 1;
+  n = strlen (c);
+  for (i = n-1; i >= 0; i--)
   {
-     if (c[a]=='1')
-     {
-        count = count + base;
-     }
-
-     base = base * 2;
+    if (c[i] == '1')
+    {
+      count = count + base;
+    }
+    base = base * 2;
   }
   return count;
 
