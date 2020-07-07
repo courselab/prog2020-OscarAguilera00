@@ -23,8 +23,25 @@
 
 /* Sort the first 'n' integers values in 'vector'. */
 
-void sort (int* vector, int n)
-{
+void sort (int* vector, int n);
+
+{int (x,y,z);
+
+  for(x=1; x<n; i++)
+  {
+      for(y=0; y<n-1; j++)
+      {
+          if (vector[y]>vector[y+1]
+              {
+                  z= (vector[y]);
+                  vector[y] = vector [y+1];
+        vector[y+1] = z;
+              }
+      }
+  }
+
+
+
 }
 
 #define USAGE "m009 <num1> <nun2> ... \n"
@@ -33,27 +50,28 @@ void sort (int* vector, int n)
 
 int main (int argc, char **argv)
 {
-  int values[MAX];
-  int i;
+      int values[MAX];
+      int i;
+
 
   /* Read command line arguments into vector. */
-  
-  for (i=1; i<argc; i++)
+
+    for (i=1; i<argc; i++)
     values[i-1] = atoi(argv[i]);
 
 
   /* Sort vector. */
-  
+
   sort (values, argc-1);
 
 
   /* Output sorted vector. */
-  
+
   for (i=0; i<argc-1; i++)
     printf ("%d ", values[i]);
 
   printf ("\n");
-  
+
   return 0;
 }
 
@@ -62,5 +80,5 @@ int main (int argc, char **argv)
    Selection sort: https://en.wikipedia.org/wiki/Selection_sort
    Bubble sort: https://en.wikipedia.org/wiki/Bubble_sort
    Insertion sort: https://en.wikipedia.org/wiki/Insertion_sort
-  
+
  */

@@ -82,6 +82,7 @@ int day_of_week (int day, int month)
   Month [9]=31;
   Month [10]=30;
   Month [11]=31;
+
   return sun;
 
 }
