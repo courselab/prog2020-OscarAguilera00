@@ -25,24 +25,23 @@
 
 void sort (int* vector, int n);
 
-{int (x,y,z);
-
-  for(x=1; x<n; i++)
+{
+int i, v, aux;
+for (i = 0; i < n; i++)
   {
-      for(y=0; y<n-1; j++)
+    for (v = 0; v < n - i - 1; v++)
+    {
+      if (vector[v] > vector[v+1])
       {
-          if (vector[y]>vector[y+1]
-              {
-                  z= (vector[y]);
-                  vector[y] = vector [y+1];
-        vector[y+1] = z;
-              }
+        aux = vector[v];
+        vector [v] = vector [v+1];
+        vector [v+1] = aux;
       }
+    }
   }
-
-
-
 }
+
+
 
 #define USAGE "m009 <num1> <nun2> ... \n"
 
