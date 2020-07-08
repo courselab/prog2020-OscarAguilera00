@@ -23,9 +23,10 @@
 
 /* Sort the first 'n' integers values in 'vector'. */
 
-void sort (int* vector, int n);
+void sort (int* vector, int n)
 
-{int i,x,z;
+{
+    int i,x,z;
 i=1;
 while (i<n)
 {
